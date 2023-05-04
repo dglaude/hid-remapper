@@ -1,0 +1,67 @@
+{
+    "version": 6,
+    "unmapped_passthrough_layers": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "partial_scroll_timeout": 1000000,
+    "interval_override": 0,
+    "tap_hold_threshold": 200000,
+    "mappings": [
+        {
+            "target_usage": "0xfff10001",
+            "source_usage": "0x00090003",
+            "scaling": 1000,
+            "layers": [
+                0
+            ],
+            "sticky": true,
+            "tap": false,
+            "hold": false
+        },
+        {
+            "target_usage": "0x00010030",
+            "source_usage": "0xfff30001",
+            "scaling": 10000,
+            "layers": [
+                1
+            ],
+            "sticky": false,
+            "tap": false,
+            "hold": false
+        },
+        {
+            "target_usage": "0x00010031",
+            "source_usage": "0xfff30002",
+            "scaling": 10000,
+            "layers": [
+                1
+            ],
+            "sticky": false,
+            "tap": false,
+            "hold": false
+        }
+    ],
+    "macros": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "expressions": [
+        "0x00010030 input_state scaling -1000 mul scaling clamp",
+        "0x00010031 input_state scaling -1000 mul scaling clamp",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ]
+}
