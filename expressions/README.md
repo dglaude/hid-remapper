@@ -37,3 +37,24 @@ The easy way to configure that is to use the examples: "expressions: middle butt
 And modify the two expressions.
 
 Else you have to use the json export and import that.
+
+**Test 2b: Rotate any° using expressions**
+
+This is totally useless for any kind of Tremor.
+It is just the generalisation of the official "rotate mouse by 30 degrees" from the example page on https://www.jfedor.org/hid-remapper-config/ but this time you have to define the same angle *twice* in the `Scaling` box of the mapping. Default value in the json file is 30° but you can change that.
+
+Here are the two expressions to use:
+* `0x00010030 input_state scaling cos mul 0x00010031 input_state scaling sin mul add` <= Compute new X based on old x and y
+* `0x00010030 input_state scaling sin -1 mul mul 0x00010031 input_state scaling cos mul add` <= Compute new Y based on old x and y
+
+This is what it should look like in the UI side (imporant point, you need to put twice the angle in degree in the Scaling box for both X and Y computation):
+
+<img width="534" alt="02b_30°rotation_mapping" src="https://user-images.githubusercontent.com/19435932/236534605-00bbe314-6980-4e9c-859f-3f73a2324b9c.PNG">
+<img width="540" alt="02b_30°rotation_expressions" src="https://user-images.githubusercontent.com/19435932/236534622-cb054d7f-2812-4a6d-bb40-68a28268dad4.PNG">
+
+The easy way to configure that is to use the examples: "expressions: middle button enables mouse jiggler"
+
+And modify the two expressions, and the scaling value.
+
+Else you have to use the json export and import that.
+
