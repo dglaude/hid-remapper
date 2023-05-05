@@ -1,0 +1,64 @@
+{
+    "version": 6,
+    "partial_scroll_timeout": 1000000,
+    "interval_override": 0,
+    "mappings": [
+        {
+            "target_usage": "0xfff10001",
+            "source_usage": "0x00090003",
+            "scaling": 1000,
+            "layers": [
+                0
+            ],
+            "sticky": true,
+            "tap": false,
+            "hold": false
+        },
+        {
+            "target_usage": "0x00010030",
+            "source_usage": "0xfff30001",
+            "scaling": 30000,
+            "layers": [
+                1
+            ],
+            "sticky": false,
+            "tap": false,
+            "hold": false
+        },
+        {
+            "target_usage": "0x00010031",
+            "source_usage": "0xfff30002",
+            "scaling": 30000,
+            "layers": [
+                1
+            ],
+            "sticky": false,
+            "tap": false,
+            "hold": false
+        }
+    ],
+    "unmapped_passthrough_layers": [
+        0
+    ],
+    "macros": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "tap_hold_threshold": 200000,
+    "expressions": [
+        "0x00010030 input_state scaling cos mul 0x00010031 input_state scaling sin mul add",
+        "0x00010030 input_state scaling sin -1000 mul mul 0x00010031 input_state scaling cos mul add",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ]
+}
