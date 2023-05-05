@@ -1,6 +1,8 @@
-Trying various usage of expressions to filter tremor mouvement on the mouse input.
+Trying various usage of expressions to computer/filter mouse movement based on mouse input.
 
 **Test 1: Clipping X and Y values**
+
+This could have some usefullness for filtering Tremor as it limit big movement to the maximum value. This also slow down any fast movement you may want to do.
 
 Here are the two expressions to use:
 * `0x00010030 input_state scaling -1 mul scaling clamp` <= Filter X value
@@ -18,6 +20,8 @@ And modify the two expressions.
 Else you have to use the json export and import that.
 
 **Test 2: Rotate 30° using expressions**
+
+This is totally useless for any kind of Tremor, it offer no added value that the official "rotate mouse by 30 degrees" from the example page on https://www.jfedor.org/hid-remapper-config/ but is just another way to implement the same thing.
 
 Here are the two expressions to use:
 * `0x00010030 input_state 0.866 mul 0x00010031 input_state 0.5 mul add` <= Compute new X based on old x and y
