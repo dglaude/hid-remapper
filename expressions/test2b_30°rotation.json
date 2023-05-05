@@ -1,5 +1,11 @@
 {
     "version": 6,
+    "unmapped_passthrough_layers": [
+        0,
+        1,
+        2,
+        3
+    ],
     "partial_scroll_timeout": 1000000,
     "interval_override": 0,
     "mappings": [
